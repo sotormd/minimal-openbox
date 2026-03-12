@@ -23,6 +23,6 @@
 
 *lineSpace:             5
 *letterSpace:           1
-*geometry:              40x10
+*geometry:              120x33
 *internalBorder:        20
 *scrollBar:             false

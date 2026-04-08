@@ -1,5 +1,5 @@
 {
-  description = "minimal openbox";
+  description = "very minimal openbox for my nixos needs";
 
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
@@ -10,11 +10,11 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
-          self.nixosModules.minimal-openbox
+          self.nixosModules.coffee
         ];
       };
 
-      nixosModules.minimal-openbox = _: { imports = [ ./wm.nix ]; };
+      nixosModules.coffee = _: { imports = [ ./wm.nix ]; };
 
     };
 }

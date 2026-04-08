@@ -1,6 +1,6 @@
-# minimal openbox
+# coffee
 
-_very_ minimal openbox configuration
+_very_ minimal openbox configuration for my NixOS needs
 
 ![screenshot](./screenshots/openbox.png)
 
@@ -15,7 +15,7 @@ largely inspired by [retro](http://github.com/chocolateBread799/retro)
 
 # usage
 
-1. import `nixosModules.minimal-openbox`, example:
+1. import `nixosModules.coffee`, example:
 
    ```nix
    {
@@ -23,8 +23,8 @@ largely inspired by [retro](http://github.com/chocolateBread799/retro)
        nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
        # add this flake as an input
-       minimal-openbox = "github:sotormd/minimal-openbox";
-       minimal-openbox.inputs.nixpkgs.follows = "nixpkgs";
+       coffee = "github:sotormd/coffee";
+       coffee.inputs.nixpkgs.follows = "nixpkgs";
      };
 
      outputs = inputs: {
@@ -32,7 +32,7 @@ largely inspired by [retro](http://github.com/chocolateBread799/retro)
          specialArgs = { inherit inputs; };
          modules = [
            # import the module
-           inputs.minimal-openbox.nixosModules.minimal-openbox
+           inputs.coffee.nixosModules.coffee
 
            # your other modules here
            ./configuration.nix

@@ -24,7 +24,6 @@ largely inspired by [retro](http://github.com/chocolateBread799/retro)
 
        # add this flake as an input
        coffee = "github:sotormd/coffee";
-       coffee.inputs.nixpkgs.follows = "nixpkgs";
      };
 
      outputs = inputs: {
